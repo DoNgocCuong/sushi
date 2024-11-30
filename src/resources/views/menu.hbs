@@ -1,0 +1,80 @@
+
+<div class="container-menu">
+    <div class="shopping-cart-menu">
+        <li class="ti-shopping-cart"></li>
+    </div>
+    <div class="header-menu">
+        <ul class="total-select">
+            <li>
+                <ul class="branch-menu">
+                    <li> <span>Chi Nhánh:</span></li>
+                    <li>
+                        <select id="type-of-branch"></select>
+                        {{#if branch}}
+                            {{#each branch}}
+                                
+                                <option value="{{branch.MACHINHANH}}">{{branch.TENCHINHANH}}</option>
+                                
+                            {{/each}}
+                        {{else}}
+                            <p>Không có sản phẩm nào để hiển thị</p>
+                        {{/if}}
+                        </select>
+                        
+                    </li>
+                </ul>    
+            </li>
+            <li>
+                <ul class="dish-menu">
+                    <li> <span>Loại món:</span></li>
+                    <li>
+                        <select id="type-of-dish">
+                            <option value="KV">Khai vị</option>
+                            <option value="ss-cs">SHASHIMI-CÁ SỐNG</option>
+                            <option value="cc">CƠM CUỘN</option>
+                        </select>
+                    </li>                
+                </ul>
+            </li>
+            <li>
+                <ul class="price-menu">
+                    <li> <span>Giá:</span></li>
+                    <li>
+                        <select id="type-of-price">
+                            <option value="1">0-50.000đ</option>
+                            <option value="2">50.000đ-100.000đ</option>
+                            <option value="3">100.000đ trở lên</option>
+                        </select>
+                    </li> 
+                    <li>
+                        <button>Lọc</button>
+                    </li>
+                </ul>               
+            </li>
+        </ul>
+        <ul class="content-menu">
+            {{#if products_outstanding}}
+                {{#each products_outstanding}}
+                    <li>
+                        <div><button>+</button></div>
+                        <div class="img-products-branch">
+                            <img src="{{this.url_pr}}" alt="" class="img-branch">
+                        </div>
+                        <p>{{this.name_pr}}</p>
+                        <p>{{this.description_pr}}</p>
+                        <p>{{this.price}} đ</p>
+                    </li>
+                {{/each}}
+            {{else}}
+                <p>Không có sản phẩm nào để hiển thị</p>
+            {{/if}}               
+        
+        </ul>
+    </div>
+
+    
+
+    <div class="content-menu">
+        <p></p>
+    </div>
+</div>
