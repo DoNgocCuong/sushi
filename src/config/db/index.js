@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root', // Thay bằng username của bạn
     password: '112233', // Thay bằng password của bạn
-    database: 'database_test', // Thay bằng tên database của bạn
+    database: 'sushi', // Thay bằng tên database của bạn
 });
 
 connection.connect((err) => {

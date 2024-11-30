@@ -13,7 +13,7 @@
                         {{#if branch}}
                             {{#each branch}}
                                 
-                                <option value="{{branch.MACHINHANH}}">{{branch.TENCHINHANH}}</option>
+                                <option value="{{this.MACHINHANH}}">{{this.TENCHINHANH}}</option>
                                 
                             {{/each}}
                         {{else}}
@@ -32,7 +32,7 @@
                             {{#if TypeOfDish}}
                                 {{#each TypeOfDish}}
                                     
-                                    <option value="{{TypeOfDish.MALOAI}}">{{branch.TENLOAI}}</option>
+                                    <option value="{{this.MALOAI}}">{{this.TENLOAI}}</option>
                                     
                                 {{/each}}
                             {{else}}
@@ -64,11 +64,11 @@
                     <li>
                         <div><button>+</button></div>
                         <div class="img-products-branch">
-                            <img src="{{this.url_pr}}" alt="" class="img-branch">
+                            <img src="{{this.URL}}" alt="" class="img-branch">
                         </div>
-                        <p>{{this.name_pr}}</p>
-                        <p>{{this.description_pr}}</p>
-                        <p>{{this.price}} đ</p>
+                        <p>{{this.TENMON}}</p>
+                        <p>{{this.MOTA}}</p>
+                        <p>{{this.GIA}} đ</p>
                     </li>
                 {{/each}}
             {{else}}
