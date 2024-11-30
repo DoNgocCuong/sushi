@@ -18,13 +18,13 @@ class MenuControlle{
             console.log('Dữ liệu gửi tới view:', products_outstanding); // Log dữ liệu
             res.render('Menu', {branch });
         });
-        MenuModel.getAllTypeOfDish((err, branch) => {
+        MenuModel.getAllTypeOfDish((err, TypeOfDish) => {
             if (err) {
                 console.error('Lỗi khi lấy dữ liệu:', err);
                 return res.status(500).send('Lỗi server');
             }
             console.log('Dữ liệu gửi tới view:', products_outstanding); // Log dữ liệu
-            res.render('Menu', {branch });
+            res.render('Menu', {TypeOfDish });
         });
     }
 }

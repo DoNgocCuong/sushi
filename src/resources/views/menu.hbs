@@ -29,9 +29,15 @@
                     <li> <span>Loại món:</span></li>
                     <li>
                         <select id="type-of-dish">
-                            <option value="KV">Khai vị</option>
-                            <option value="ss-cs">SHASHIMI-CÁ SỐNG</option>
-                            <option value="cc">CƠM CUỘN</option>
+                            {{#if TypeOfDish}}
+                                {{#each TypeOfDish}}
+                                    
+                                    <option value="{{TypeOfDish.MALOAI}}">{{branch.TENLOAI}}</option>
+                                    
+                                {{/each}}
+                            {{else}}
+                                <p>Không có sản phẩm nào để hiển thị</p>
+                            {{/if}}
                         </select>
                     </li>                
                 </ul>

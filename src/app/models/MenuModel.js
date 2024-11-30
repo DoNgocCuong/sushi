@@ -23,7 +23,7 @@ class MenuModel{
         });
     }
     static getAllTypeOfDish(callback) {
-        const query = 'SELECT * FROM CHINHANH'; // Lấy dữ liệu từ bảng
+        const query = 'SELECT * FROM LOAIMON'; // Lấy dữ liệu từ bảng
         db.query(query, (err, results) => {
             if (err) {
                 console.error('Lỗi khi thực hiện truy vấn:', err);
