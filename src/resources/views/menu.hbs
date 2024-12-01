@@ -53,14 +53,14 @@
                         </select>
                     </li> 
                     <li>
-                        <button>Lọc</button>
+                        <button id="button-menu">Lọc</button>
                     </li>
                 </ul>               
             </li>
         </ul>
         <ul class="content-menu">
-            {{#if products_outstanding}}
-                {{#each products_outstanding}}
+            {{#if products}}
+                {{#each products}}
                     <li>
                         <div><button>+</button></div>
                         <div class="img-products-branch">
@@ -73,14 +73,9 @@
                 {{/each}}
             {{else}}
                 <p>Không có sản phẩm nào để hiển thị</p>
-            {{/if}}               
+            {{/if}}       
         
         </ul>
     </div>
-
     
-
-    <div class="content-menu">
-        <p></p>
-    </div>
 </div>

@@ -42,7 +42,7 @@
   border-radius: 10%; }
 
 /* Đảm bảo ảnh có kích thước đồng bộ */
-.img-products_branch,
+.img-products-branch,
 .img-products_outstanding {
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@
   /* Chiều cao cố định cho vùng ảnh */
   margin-bottom: 10px; }
 
-.img-products_branch img,
+.img-products-branch img,
 .img-products_outstanding img {
   max-width: 100%;
   /* Đảm bảo ảnh không vượt quá vùng chứa */
